@@ -42,3 +42,26 @@ while True: ## REPL - Read Execute Program Loop
     elif cmd == "quit":
         save_dict(conn)
         exit()
+
+def main():
+    while True: ## REPL - Read Execute Program Loop
+        cmd = input("Command: ")
+        if cmd == "list":
+            print(read_dict(conn))
+        elif cmd == "add":
+            name = input("  Word: ")
+            phone = input("  Translation: ")
+            add_word(conn, name, phone)
+            print(f" Added word {name}")
+        elif cmd == "delete":
+            ID = input("  ID: ")
+            delete_word(conn, ID)
+        elif cmd == "quit":
+            save_dict(conn)
+            exit()
+        
+main()
+
+
+
+
