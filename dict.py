@@ -30,7 +30,8 @@ def save_dict(C):
 while True: ## REPL - Read Execute Program Loop
     cmd = input("Command: ")
     if cmd == "list":
-        print(read_dict(conn))
+    for i, wd, trans in read_dict(conn):
+        print(f"{i}: {wd} - {trans}")
     elif cmd == "add":
         name = input("  Word: ")
         phone = input("  Translation: ")
