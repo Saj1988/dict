@@ -5,6 +5,8 @@ conn = psycopg2.connect(
    user="user123",
    password="abc123"
 )
+# # read_dict: returns the list of all dictionary entries:
+#   argument: C - the database connection.
 
 def read_dict(C):
     cur = C.cursor()
